@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, Zap, ChevronDown } from "lucide-react";
 import logo from '../assets/logo.svg';
@@ -38,6 +39,7 @@ interface HeaderProps {
 export function Header({ onPricingClick }: HeaderProps) {
   const { language, setLanguage, t } = useLanguage();
   const [location] = useLocation();
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   const NavLinks = ({ className, mobile = false }: { className?: string; mobile?: boolean }) => (
     <div className={className}>
@@ -62,7 +64,10 @@ export function Header({ onPricingClick }: HeaderProps) {
               <p className="text-muted-foreground">
                 Get access to advanced analytics, priority processing, and unlimited optimizations.
               </p>
-              <Button className="w-full mt-4" onClick={onPricingClick}>
+              <Button className="w-full mt-4" onClick={() => {
+                onPricingClick?.();
+                setIsSheetOpen(false);
+              }}>
                 View Pricing
               </Button>
             </DialogDescription>
@@ -75,6 +80,7 @@ export function Header({ onPricingClick }: HeaderProps) {
           "relative text-sm font-semibold transition-all text-muted-foreground/70 hover:text-foreground group",
           location === "/" && !mobile && ""
         )}
+        onClick={() => mobile && setIsSheetOpen(false)}
       >
         {t('nav.features')}
         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground transition-all duration-300 group-hover:w-full" />
@@ -138,7 +144,7 @@ export function Header({ onPricingClick }: HeaderProps) {
 
             {/* Mobile Menu */}
             <div className="md:hidden">
-              <Sheet>
+              <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
                 <SheetTrigger asChild>
                   <button className="p-2 hover:bg-muted rounded-full transition-colors">
                     <Menu className="w-6 h-6" />
@@ -154,7 +160,10 @@ export function Header({ onPricingClick }: HeaderProps) {
                     <NavLinks className="flex flex-col gap-6 text-lg" mobile />
                     
                     <Button 
-                      onClick={onPricingClick}
+                      onClick={() => {
+                        onPricingClick?.();
+                        setIsSheetOpen(false);
+                      }}
                       icon={<Zap className="w-4 h-4 fill-current" />}
                       className="w-full text-sm"
                     >
