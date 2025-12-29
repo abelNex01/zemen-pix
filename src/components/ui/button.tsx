@@ -67,8 +67,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#D4FF33] text-[#1C1F26] dark:bg-[#1C1F26] dark:text-[#D4FF33] group-hover:scale-95 transition-transform shrink-0">
             {icon || <DotArrow />}
           </span>
-          <span className="flex-1 text-center font-semibold px-2">{children}</span>
-          <div className="w-10 shrink-0" /> {/* Spacer to balance the icon and center text */}
+          <span className="flex-1 text-center font-semibold">{children}</span>
+          <div className="w-4 shrink-0" /> {/* Spacer for visual balance */}
         </Comp>
       )
     }

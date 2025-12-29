@@ -43,7 +43,7 @@
 }
 
 .dark {
-  /* Minimalist Dark Mode */
+  /* Minimalist Dark Mode with vibrant accent */
   --background: 0 0% 10%;
   --foreground: 0 0% 98%;
   
@@ -56,15 +56,15 @@
   --muted: 0 0% 15%;
   --muted-foreground: 0 0% 65%;
   
-  --accent: 0 0% 15%;
-  --accent-foreground: 0 0% 98%;
+  --accent: 73 100% 60%; /* #D4FF33 vibrant lime accent */
+  --accent-foreground: 0 0% 10%;
   
   --destructive: 0 62% 30%;
   --destructive-foreground: 0 0% 98%;
   
-  --border: 0 0% 20%;
+  --border: 0 0% 20%; /* Neutral gray for borders */
   --input: 0 0% 20%;
-  --ring: 0 0% 83%;
+  --ring: 73 100% 60%; /* #D4FF33 vibrant lime for focus rings */
 }
 
 @layer base {

@@ -84,7 +84,7 @@ export function ComparisonSlider({
 
       <div 
         ref={containerRef}
-        className="relative w-full aspect-video bg-muted/30 rounded-2xl overflow-hidden cursor-ew-resize select-none border border-border shadow-sm"
+        className="relative w-full aspect-video bg-muted/30 rounded-2xl overflow-hidden cursor-ew-resize select-none border dark:border-accent/60 border-border shadow-sm"
         onClick={(e) => handleMove(e.clientX)}
       >
         {/* Optimized Image (Background) */}

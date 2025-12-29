@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink } from 'lucide-react';
+import { X, ExternalLink, Bolt } from 'lucide-react';
 import { useLanguage } from '@/hooks/use-language';
+import { Button } from '@/components/ui/button';
 import adImage from '../assets/ad.jfif';
 
 interface AdProps {
@@ -60,13 +61,13 @@ export default function Ad({ isOpen, onClose, onLearnMore }: AdProps) {
                 <p className="text-zinc-300 text-sm mb-6 max-w-xs leading-relaxed">
                   {t('ad.desc')}
                 </p>
-                <button 
+                <Button 
                   onClick={handleAction}
-                  className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-xl font-bold hover:bg-zinc-200 transition-colors w-full justify-center group"
+                  icon={<Bolt className="w-4 h-4" />}
+                  className="w-full"
                 >
                   {t('ad.btn')}
-                  <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </button>
+                </Button>
               </div>
             </div>
           </motion.div>

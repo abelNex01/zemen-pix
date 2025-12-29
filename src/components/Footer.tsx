@@ -9,7 +9,7 @@ export function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="border-t border-border bg-muted/30 w-full overflow-hidden">
+    <footer className="border-t dark:border-accent/60 border-border bg-muted/30 w-full overflow-hidden">
       <motion.div 
         className="container mx-auto px-6 py-12 lg:py-20"
         variants={containerVariants}

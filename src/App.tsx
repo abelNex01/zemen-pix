@@ -25,7 +25,7 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider defaultTheme="system" storageKey="zemenpix-theme">
+      <ThemeProvider defaultTheme="light" storageKey="zemenpix-theme">
         <LanguageProvider>
           <TooltipProvider>
             <SmoothScroll>

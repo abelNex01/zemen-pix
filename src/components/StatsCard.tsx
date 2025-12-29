@@ -17,7 +17,7 @@ export function StatsCard() {
     <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto mt-12 mb-8">
       <motion.div 
         variants={itemVariants}
-        className="bg-card border border-border/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+        className="bg-card border dark:border-accent/60 border-border/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
       >
         <div className="flex items-center gap-3 mb-2 text-muted-foreground">
           <ImageIcon className="w-5 h-5" />
@@ -30,7 +30,7 @@ export function StatsCard() {
       
       <motion.div 
         variants={itemVariants}
-        className="bg-card border border-border/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+        className="bg-card border dark:border-accent/60 border-border/50 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
       >
         <div className="flex items-center gap-3 mb-2 text-muted-foreground">
           <Save className="w-5 h-5" />

@@ -16,7 +16,7 @@ import {
   InputOTPSlot,
 } from "@/components/ui/input-otp";
 import { Input } from "@/components/ui/input";
-import { Github, Check, ShoppingCart, Code2, Globe, Sparkles, ArrowRight, ShieldCheck, Mail } from "lucide-react";
+import { Github, Check, ShoppingCart, Code2, Globe, Sparkles, ArrowRight, ShieldCheck, Mail, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/hooks/use-language";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -238,7 +238,7 @@ export function BuyCodebaseDialog({ showText = true }: { showText?: boolean }) {
                   ? `Thank you for your purchase. The codebase has been sent to ${email}.` 
                   : `ለግዢዎ እናመሰግናለን። የኮድ ምንጩ ወደ ${email} ተልኳል::`}
               </p>
-              <Button asChild className="w-full h-14">
+              <Button asChild className="w-full h-14" icon={<ExternalLink className="w-4 h-4" />}>
                  <a href="https://github.com" target="_blank" rel="noopener noreferrer">
                     {language === 'en' ? "Go to Repository" : "ወደ ትርኢቱ ሂድ"}
                  </a>

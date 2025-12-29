@@ -33,7 +33,7 @@ export default function Donation({ isOpen, onClose }: DonationProps) {
       id: 'cbe',
       name: 'Commercial Bank of Ethiopia',
       logo: cbeLogo,
-      account: '1000123456789',
+      account: '1000521265527',
       color: 'bg-[#9333ea]/10',
       borderColor: 'border-[#9333ea]/20',
       accent: 'text-[#9333ea]'
@@ -42,7 +42,7 @@ export default function Donation({ isOpen, onClose }: DonationProps) {
       id: 'telebirr',
       name: 'Telebirr',
       logo: telebirrLogo,
-      account: '0912345678',
+      account: '0978004968',
       color: 'bg-[#005bb7]/10',
       borderColor: 'border-[#005bb7]/20',
       accent: 'text-[#005bb7]'

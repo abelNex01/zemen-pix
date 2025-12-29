@@ -11,13 +11,13 @@ import art7 from "../assets/art/art7.png";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const cardData = [
-  { src: art1, username: "@vince", color: "#FF4D4D", testimonial: "Blown away by the speed!" },
-  { src: art2, username: "@sarah", color: "#FFD700", testimonial: "No cloud, No worry." },
+  { src: art1, username: "@bre", color: "#FF4D4D", testimonial: "Blown away by the speed!" },
+  { src: art2, username: "@abel", color: "#FFD700", testimonial: "No cloud, No worry." },
   { src: art3, username: "@mike", color: "#4D94FF", testimonial: "Cleanest optimization yet." },
   { src: art4, username: "@anna", color: "#32CD32", testimonial: "Saved me gigabytes of data!" },
-  { src: art5, username: "@leo", color: "#FF69B4", testimonial: "Simple but powerful." },
-  { src: art6, username: "@jade", color: "#8A2BE2", testimonial: "Professional grade tools." },
-  { src: art7, username: "@kyle", color: "#FF8C00", testimonial: "The UI is just stunning." },
+  { src: art5, username: "@emma", color: "#FF69B4", testimonial: "Simple but powerful." },
+  { src: art6, username: "@kira", color: "#8A2BE2", testimonial: "Professional grade tools." },
+  { src: art7, username: "@sami", color: "#FF8C00", testimonial: "The UI is just stunning." },
 ];
 
 const Badge = ({ text, color, className }: { text: string; color: string; className?: string }) => (

@@ -44,7 +44,7 @@ function FeatureCard({ icon: Icon, title, desc }: { icon: any, title: string, de
   return (
     <motion.div 
       variants={itemVariants}
-      className="p-6 rounded-2xl bg-muted/30 border border-border/50 hover:bg-muted/50 transition-colors"
+      className="p-6 rounded-2xl bg-muted/30 border dark:border-accent/40 border-border/50 hover:bg-muted/50 transition-colors"
     >
       <div className="w-12 h-12 bg-background rounded-xl flex items-center justify-center mb-4 shadow-sm border border-border">
         <Icon className="w-6 h-6 text-foreground" />
@@ -219,8 +219,8 @@ export default function Home() {
             >
               <Button 
                 onClick={() => setIsDonationOpen(true)}
-                icon={<Heart className="w-5 h-5 fill-red-600" />}
-                className="bg-red-500/10 text-red-600 hover:bg-red-500/20 pr-8"
+                icon={<Heart className="w-5 h-5 fill-black" />}
+                className="bg-red-500/10 text-red-600 hover:bg-red-500/20 gap-3"
               >
                 {t('hero.donate')}
               </Button>
@@ -285,7 +285,7 @@ export default function Home() {
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="bg-card border border-border rounded-3xl overflow-hidden shadow-xl shadow-black/5"
+              className="bg-card border dark:border-accent/50 border-border rounded-3xl overflow-hidden shadow-xl shadow-black/5"
             >
 
               <div className="border-b border-border bg-muted/20 p-4 md:p-6 flex flex-col md:flex-row items-center justify-between gap-4">

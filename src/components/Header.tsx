@@ -85,7 +85,7 @@ export function Header({ onPricingClick }: HeaderProps) {
 
   return (
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
-      <header className="w-full max-w-5xl bg-background/90 backdrop-blur-xl border border-border shadow-lg rounded-2xl h-16 pointer-events-auto">
+      <header className="w-full max-w-5xl bg-background/90 backdrop-blur-xl border dark:border-accent/80 border-border shadow-lg rounded-2xl h-16 pointer-events-auto">
         <motion.div 
           className="w-full h-full flex items-center px-6"
           variants={containerVariants}
@@ -103,7 +103,7 @@ export function Header({ onPricingClick }: HeaderProps) {
           </motion.nav>
 
           <motion.div className="flex-1 flex items-center justify-end gap-3" variants={itemVariants}>
-            <div className="hidden sm:flex items-center gap-1">
+            <div className="hidden md:flex items-center gap-1">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <button className="p-2 hover:bg-muted rounded-full text-muted-foreground/50 hover:text-foreground transition-colors group">
@@ -122,13 +122,17 @@ export function Header({ onPricingClick }: HeaderProps) {
               <BuyCodebaseDialog showText={false} />
             </div>
 
-            <Button 
-              onClick={onPricingClick}
-              icon={<Zap className="w-4 h-4 fill-current" />}
-              className="hidden sm:flex text-sm"
-            >
-              Upgrade to Pro 
-            </Button>
+
+            <div className="hidden md:flex">
+              <Button 
+                onClick={onPricingClick}
+                icon={<Zap className="w-4 h-4 fill-current" />}
+                className="text-sm"
+              >
+                Upgrade to Pro 
+              </Button>
+            </div>
+
 
             <ThemeToggle />
 
@@ -148,6 +152,14 @@ export function Header({ onPricingClick }: HeaderProps) {
                   </SheetHeader>
                   <div className="flex flex-col gap-6">
                     <NavLinks className="flex flex-col gap-6 text-lg" mobile />
+                    
+                    <Button 
+                      onClick={onPricingClick}
+                      icon={<Zap className="w-4 h-4 fill-current" />}
+                      className="w-full text-sm"
+                    >
+                      Upgrade to Pro 
+                    </Button>
                     
                     <div className="pt-6 border-t border-border">
                       <p className="text-sm text-muted-foreground mb-4 font-medium">
