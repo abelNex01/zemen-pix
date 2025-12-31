@@ -40,7 +40,7 @@ export function ImageDeck() {
 
 
   useEffect(() => {
-    setHoveredIndex(isMobile ? null : 4);
+    setHoveredIndex(isMobile ? 2 : 4);
   }, [isMobile]);
 
 
@@ -52,7 +52,7 @@ export function ImageDeck() {
   return (
     <div 
       className="relative w-full max-w-6xl h-[220px] md:h-[350px] mx-auto flex flex-col items-center justify-center mt-0 mb-2 px-4 overflow-visible isolate"
-      onMouseLeave={() => setHoveredIndex(isMobile ? null : 4)}
+      onMouseLeave={() => setHoveredIndex(isMobile ? 2 : 4)}
     >
       <div className="relative w-full h-full flex items-center justify-center">
         {cardData.map((card, index) => {
